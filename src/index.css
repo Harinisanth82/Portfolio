@@ -1,0 +1,10 @@
+/* Basic resets to ensure variables and global styles take precedence */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
