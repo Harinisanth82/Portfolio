@@ -90,29 +90,65 @@
 @media (max-width: 768px) {
     /* Navbar fixed top fixes are now global */
     .navbar {
-        padding: 0 1rem !important;
+        padding: 0 1.5rem !important;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 1001; /* Keep above the overlay */
     }
 
     .mobile-toggle {
         display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 1001; /* Keep above the overlay */
+        font-size: 1.6rem; /* Reduced size */
+    }
+
+    .navbar:has(.nav-links.active) {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: transparent !important;
+        border: none !important;
     }
 
     .nav-links {
         position: fixed;
-        top: 80px;
-        left: -100%;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: calc(100vh - 80px);
-        background: var(--glass-bg);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        height: 100vh;
+        background: var(--sidebar-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         flex-direction: column;
-        padding: 4rem 2rem;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border-top: 1px solid var(--glass-border);
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 2rem; /* Reduced gap */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+        border: none;
+        z-index: 1000;
+        box-shadow: none;
     }
 
     .nav-links.active {
-        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-link {
+        font-size: 1.25rem; /* Reduced size */
+        font-weight: 600;
+        color: var(--text-color);
+    }
+
+    .theme-toggle {
+        margin-top: 1rem;
+        font-size: 1.5rem; /* Reduced size */
     }
 }

@@ -1,5 +1,5 @@
 .skills {
-    padding-top: 20px;
+    /* spacing handled globally */
 }
 
 .skills-categories {
@@ -64,5 +64,20 @@
     .skill-badge {
         padding: 0.5rem 1rem;
         font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card {
+        padding: 1.2rem;
+    }
+
+    .category-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .skill-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
 }

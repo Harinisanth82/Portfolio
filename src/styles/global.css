@@ -74,11 +74,36 @@ main {
     border-radius: 4px;
 }
 
+/* Global Section Spacing (Desktop: 100px total between sections) */
+.home, .about, .projects, .skills, .contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Hide manual break tags so CSS padding controls spacing uniformly */
+.home > br, .about > br, .projects > br, .skills > br, .contact > br {
+    display: none;
+}
+
 section {
-    padding: 5rem 0;
+    padding: 0;
+}
+
+@media (max-width: 992px) {
+    /* Tablet Spacing (80px total between sections) */
+    .home, .about, .projects, .skills, .contact {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 @media (max-width: 768px) {
+    /* Mobile Spacing (60px total between sections) */
+    .home, .about, .projects, .skills, .contact {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
     .container {
         padding: 0 1.5rem;
     }
@@ -88,7 +113,28 @@ section {
         margin-bottom: 2.5rem;
     }
 
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
     section {
-        padding: 4rem 0;
+        padding: 3rem 0;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
     }
 }

@@ -10,6 +10,8 @@
   --border-color: #e2e8f0;
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(0, 0, 0, 0.08);
+  --sidebar-bg: rgba(255, 255, 255, 0.6);
+  --sidebar-border: rgba(0, 0, 0, 0.1);
   --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --btn-text: #ffffff;
   --ui-border: 1px solid rgba(0, 0, 0, 0.08);
@@ -28,6 +30,8 @@
   --border-color: #334155;
   --glass-bg: rgba(15, 23, 42, 0.7);
   --glass-border: rgba(255, 255, 255, 0.1);
+  --sidebar-bg: rgba(0, 0, 0, 0.6);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
   --btn-text: #020617;
   --ui-border: 1px solid transparent;
   --card-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
@@ -41,12 +45,15 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color var(--transition-speed), color var(--transition-speed);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

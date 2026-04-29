@@ -1,5 +1,5 @@
 .projects {
-    padding-top: 20px;
+    /* spacing handled globally */
 }
 
 .projects-grid {
@@ -85,27 +85,33 @@
     color: var(--primary-color);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%;
+    }
 
     .project-content {
-        padding: 1.5rem;
+        padding: 1.2rem;
     }
 
     .project-content h3 {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
     }
 
     .project-content p {
-        font-size: 0.95rem;
-        margin-bottom: 1.2rem;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
     }
 
     .project-tech span {
-        padding: 0.2rem 0.6rem;
-        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
     }
 }
