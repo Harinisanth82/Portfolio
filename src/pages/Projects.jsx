@@ -10,7 +10,7 @@ const Projects = () => {
             description: "A comprehensive travel platform for discovering and planning your perfect trips with interactive features.",
             tech: ["React.js", "CSS Modules", "Framer Motion"],
             github: "https://github.com/Harinisanth82/GoExplore",
-            demo: "https://goexlore.netlify.app/",
+            demo: "https://goxplore.netlify.app/",
         },
         {
             title: "FitTracker",
